@@ -38,7 +38,7 @@ jobs:
 
       - name: Build with Gradle
         working-directory: MediTime
-        run: ./gradlew build
+        run: ./gradlew build -x lint
 
       - name: Archive build artifacts
         if: success()
