@@ -15,18 +15,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17 for SDK installation
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: 17
-          architecture: x64
-
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          cmdline-tools-version: latest
+          cmdline-tools-version: 9477386
           accept-android-sdk-licenses: true
+          log-accepted-android-sdk-licenses: false
           packages: |
             platform-tools
             platforms;android-30
